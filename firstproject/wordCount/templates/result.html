@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="text-align:center">
+        <h2>입력한 텍스트 전문</h2>
+        <div>
+        {{fulltext}}
+        </div>
+        <div>
+        <h2>입력한 단어의 갯수</h2>
+        {{count}}
+        </div>
+        <div>
+        <h2>단어별 중복 수</h2>
+            {% for word,totalCount in wordDict %}
+                {{word}}:{{totalCount}}
+            {% endfor %}
+            <!-- 템플릿 변수를 이용하여 뷰의 객체를 사용함 -->
+        </div>    
+
+
+    </div>
+</body>
+</html>
